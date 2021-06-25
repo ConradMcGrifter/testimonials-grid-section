@@ -1,0 +1,100 @@
+@import "utils";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 1em;
+}
+
+// h1,
+// h2,
+// h3,
+// p {
+//     margin: 0;
+//     padding: 0;
+// }
+
+body {
+    min-height: 100%;
+    font-family: $font-stack;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    background: color(Light-Grayish-Blue);
+    padding: 1.5em;
+}
+
+.grid--container {
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+
+    .card {
+        padding: 2em;
+        border-radius: 10px;
+
+        &__p {
+            line-height: 1.6;
+            opacity: 70%;
+        }
+    }
+
+    .daniel {
+        background: color(Moderate-Violet);
+        color: white;
+    }
+
+    .jonathan {
+        background: color(Very-Dark-Grayish-Blue);
+        color: white;
+    }
+
+    .jeanette {
+        background: white;
+    }
+
+    .patrick {
+        background: color(Very-Dark-Blackish-Blue);
+        color: white;
+    }
+
+    .kira {
+        background: white;
+    }
+
+    .author--wrap {
+        // outline: solid red 2px;
+        display: flex;
+        align-items: center;
+
+        .name {
+            margin: 0;
+        }
+
+        .verified {
+            opacity: 50%;
+            font-size: 1.4rem;
+        }
+
+        img {
+            border-radius: 999px;
+            width: 30px;
+            height: 30px;
+            margin-right: 1.5em;
+        }
+    }
+}

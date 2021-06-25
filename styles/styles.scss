@@ -32,9 +32,12 @@ p {
 body {
     min-height: 100%;
     font-family: $font-stack;
-    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
     background: color(Light-Grayish-Blue);
     padding: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid--container {
@@ -43,9 +46,20 @@ body {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
 
+    @include desktopSize {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: clamp(1240px, 100vw, 1440px);
+        // max-height: 600px;
+        outline: solid red 2px;
+    }
+
     .card {
         padding: 2em;
         border-radius: 10px;
+
+        &__h3 {
+        }
 
         &__p {
             line-height: 1.6;
@@ -56,6 +70,10 @@ body {
     .daniel {
         background: color(Moderate-Violet);
         color: white;
+
+        @include desktopSize {
+            grid-column: span 2;
+        }
     }
 
     .jonathan {
@@ -70,10 +88,19 @@ body {
     .patrick {
         background: color(Very-Dark-Blackish-Blue);
         color: white;
+
+        @include desktopSize {
+            grid-column: span 2;
+        }
     }
 
     .kira {
         background: white;
+
+        @include desktopSize {
+            grid-column: 4 / 5;
+            grid-row: -3 / -1;
+        }
     }
 
     .author--wrap {

@@ -79,6 +79,10 @@ body {
         position: relative;
         color: white;
 
+        .profile-pic {
+            border: solid #a775f1 2px;
+        }
+
         .bg-img {
             position: absolute;
             right: 1em;
@@ -125,6 +129,10 @@ body {
     .patrick {
         background: color(Very-Dark-Blackish-Blue);
         color: white;
+
+        .profile-pic {
+            border: solid #a775f1 2px;
+        }
 
         @include desktopSize {
             grid-column: span 2;

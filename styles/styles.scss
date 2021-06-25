@@ -14,11 +14,14 @@ html {
     margin: 0;
 }
 
-h1,
-h2,
-h3,
 p {
     margin-top: 1em;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0.5em;
 }
 
 // h1,
@@ -51,7 +54,7 @@ body {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
         width: 100%;
-        max-width: 1350px;
+        max-width: 1300px;
         // max-height: 600px;
         // outline: solid red 2px;
     }
@@ -73,7 +76,27 @@ body {
 
     .daniel {
         background: color(Moderate-Violet);
+        position: relative;
         color: white;
+
+        .bg-img {
+            position: absolute;
+            right: 1em;
+            top: 0;
+            z-index: 0;
+
+            @include desktopSize {
+                right: 5em;
+            }
+        }
+
+        .card__title {
+            position: relative;
+        }
+
+        .card__p {
+            position: relative;
+        }
 
         @include desktopSize {
             grid-column: span 2;
@@ -88,8 +111,12 @@ body {
     .jeanette {
         background: white;
 
-        .card__title {
-            @include desktopSize {
+        @include desktopSize {
+            .card__p {
+                max-width: 30ch;
+            }
+
+            .card__title {
                 max-width: 17ch;
             }
         }
@@ -110,6 +137,10 @@ body {
         @include desktopSize {
             grid-column: 4 / 5;
             grid-row: -3 / -1;
+
+            .card__p {
+                max-width: 30ch;
+            }
         }
     }
 

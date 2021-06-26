@@ -14,19 +14,10 @@ html {
   margin: 0;
 }
 
-p {
-  margin-top: 1em;
-}
-
-h1,
-h2,
-h3 {
-  margin-top: 0.5em;
-}
-
 body {
   min-height: 100%;
   font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
   font-size: 1.3rem;
   background: #ecf2f8;
   padding: 1.5em;
@@ -57,7 +48,7 @@ body {
     -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
     width: 100%;
-    max-width: 1300px;
+    max-width: 1050px;
   }
 }
 
@@ -67,13 +58,14 @@ body {
 }
 
 .grid--container .card__title {
-  font-size: clamp(2.1rem, 1.5vw, 2.4rem);
+  margin-top: 1em;
+  font-weight: 600;
 }
 
 .grid--container .card__p {
-  line-height: 1.4;
+  line-height: 1.6;
   opacity: 70%;
-  font-size: clamp(1.4rem, 2vw, 1.6rem);
+  margin-top: 1.5em;
 }
 
 .grid--container .daniel {
@@ -156,9 +148,6 @@ body {
     -ms-grid-column-span: 1;
     grid-column: 4 / 5;
     grid-row: -3 / -1;
-  }
-  .grid--container .kira .card__p {
-    max-width: 30ch;
   }
 }
 

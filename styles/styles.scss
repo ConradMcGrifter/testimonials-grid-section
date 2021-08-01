@@ -53,9 +53,10 @@ body {
 
     @include desktopSize {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: auto auto;
         width: 100%;
-        max-width: 1050px;
+        max-width: 1150px;
 
         // max-height: 600px;
         // outline: solid red 2px;
